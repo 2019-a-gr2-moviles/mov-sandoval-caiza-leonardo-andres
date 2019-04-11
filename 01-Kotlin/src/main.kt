@@ -5,7 +5,7 @@ fun  main(args: Array<String>) {
     // Mutables
 
     //var nombre = "Adrian"
-    nombre = "Vicente"
+    //nombre = "Vicente"
 
     //Inmutables -> Es mejor.
 
