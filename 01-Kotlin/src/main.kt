@@ -41,6 +41,106 @@ fun  main(args: Array<String>) {
     estaJalado(0.0)
     estaJalado(7.0)
     estaJalado(10.0)
+
+    holaMundo("Leonardo")
+    holaMundoAvanzado(2)
+    val total=sumarDosNumeros(1,2)
+    println(total)
+
+    val arregloCumpleanos: Array<Int> = arrayOf(1,2,3,4)
+
+    var arregloTodo: Array<Any> = arrayOf(1,"asd",10.2,true)
+    arregloCumpleanos[0]=5
+    arregloCumpleanos.set(0,5)
+
+    //INMUYTABLE se puede modificar la clase pero la VARIABLE es la q no se puede reasignar
+    arregloTodo= arrayOf(5,2,3,4)
+
+  //  val notas:ArrayList<Int>= arrayListOf<Int>(1,2,3,4,5,6)
+    var notas= arrayListOf<Int>(1,2,3,4,5,6)
+
+    // FOR EACH -> Itera el arreglo
+    notas.forEachIndexed{indice, nota ->
+        println("Indice: $indice")
+        println("Nota: $nota")
+               // return Unit
+    }
+
+    //MAP -> Itera y modifica el arreglo
+    //Impares+1  Pares+2
+    val notasDos=notas.map{ nota ->
+        nota+1
+    }
+
+    notasDos.forEach{
+        println("Notas 2: $it")
+    }
+
+    val notasTres=notas.map{ nota ->
+        if(nota%2==0){
+            nota+2
+        }else{
+            nota+1
+        }
+    }
+/*
+    val notasDos = notas.map { nota ->
+        val modulo = nota % 2
+        val esPar = 0
+        when (modulo) {
+            esPar -> {
+                nota + 1
+            }
+            else -> {
+                nota + 2
+            }
+        }
+    }
+*/
+    notasTres.forEach{
+        println("Notas 3: $it")
+    }
+
+    val respuestaFilter=notas //
+        .filter{
+        it in 3..4
+        it>2 && it<5
+
+    }.map{  //Mutar o cambiar el arreglo
+        it*2
+    }
+
+    respuestaFilter.forEach{println(it)}
+
+    val novias= arrayListOf<Int>(1,2,2,3,4,5)
+
+    val respuestaNovia=novias.any{
+        it==3
+    }
+    println(respuestaNovia)
+
+    val tazos= arrayListOf<Int>(1,2,3,4,5,6,7)
+    val respuestaTazos=tazos.all{
+        it>1
+    }
+
+    println(respuestaTazos)
+
+    //sumar los valores de tazos
+
+    val totalTazos=tazos.reduce{valorAcumulado,tazo->
+        valorAcumulado+tazo
+
+    }
+    println(totalTazos)
+
+    
+
+   /* val fecha=Date()
+    fecha.time=11231231
+    fecha.year=2000
+    fecha=Date(year:1995, month:11,day:10)
+    */
 }
 
 //en kotlin no existe switch
@@ -62,4 +162,17 @@ fun estaJalado(nota: Double){
         }
     }
 
+}
+
+
+fun holaMundo(mensaje:String):Unit{
+    println("Mensaje: $mensaje.")
+}
+
+fun holaMundoAvanzado(mensaje:Any):Unit{
+    println("Mensaje: $mensaje.")
+}
+
+fun sumarDosNumeros(numUno:Int,numDos:Int):Int{
+    return numUno+numDos
 }
