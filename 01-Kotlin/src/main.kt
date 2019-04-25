@@ -1,11 +1,12 @@
 fun  main(args: Array<String>) {
 
+    val numerito=Numero("1")
     // VARIABLES
 
     // Mutables
 
-    //var nombre = "Adrian"
-    //nombre = "Vicente"
+    //var nombre = "Leonardo"
+    //nombre = "Sandoval"
 
     //Inmutables -> Es mejor.
 
@@ -134,7 +135,7 @@ fun  main(args: Array<String>) {
     }
     println(totalTazos)
 
-    
+
 
    /* val fecha=Date()
     fecha.time=11231231
@@ -162,6 +163,7 @@ fun estaJalado(nota: Double){
         }
     }
 
+
 }
 
 
@@ -176,3 +178,129 @@ fun holaMundoAvanzado(mensaje:Any):Unit{
 fun sumarDosNumeros(numUno:Int,numDos:Int):Int{
     return numUno+numDos
 }
+
+/*
+class Usuario{
+    public var nombre:String=""
+    public var apellido:String
+
+    constructor(val apellido:String){
+        this.apellido=apellido;
+    }
+}
+
+ */
+
+class Usuario(val cedula:String){
+    public var nombre:String=""
+    public var apellido:String=""
+
+    constructor(cedula:String, apellido:String):this(cedula){
+        this.apellido=apellido;
+    }
+}
+
+
+class UsuarioKT(val nombre:String,
+                val apellido:String){
+    init{
+        //Write code
+    }
+/*
+    fun hola(){
+        return this.apellido
+    }
+
+ */
+
+    private fun hola2(){
+
+    }
+
+    protected fun hola3(){
+
+    }
+
+    companion object {
+        val gravedad =9.5
+        fun correr(){
+            println("Estoy  corriendo en $gravedad")
+        }
+    }
+}
+
+class Numero(var numero:Int){
+    constructor(numeroString:String):this(numeroString.toInt())
+    {
+        println("Constructor")
+    }
+    init{
+        println("init")
+    }
+}
+
+/*
+fun a() {
+    val leonardo = UsuarioKT("a","b")
+    leonardo.nombre="andres"
+}
+*/
+
+class BaseDatos{
+    companion object {
+        val usuario= arrayListOf(1,2,3)
+
+        fun agregarUsuario(usuario:Int){
+            this.usuario.add(usuario)
+        }
+
+        fun eliminarUsuario(usuario: Int){
+            //this.usuarios
+        }
+    }
+}
+
+
+fun aa() {
+    UsuarioKT.gravedad
+    UsuarioKT.correr()
+}
+
+open class Numeros(var numeroUno:Int,
+             var numeroDos:Int){
+
+}
+
+class Suma(numeroUnos: Int,
+           numeroDoss:Int):
+        Numeros(numeroUno,numeroDos){
+}
+
+
+/*
+fun presley(requerido:Int,
+            opcional:Int=1,
+            nulo:Int?){
+
+}
+ */
+
+fun presley(requerido:Int,
+            opcional:Int=1,
+            nulo:UsuarioKT?){
+    if(nulo!=null){
+        nulo.nombre
+    }
+
+    val nombresito:String?=nulo?.nombre.toString()
+
+    nulo!!.nombre
+}
+
+
+fun cddd(){
+    presley(1, nulo=0);
+    presley(1, 1,null);
+}
+
+
