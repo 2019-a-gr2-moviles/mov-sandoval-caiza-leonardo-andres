@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorHolaMundo">#B6B429</color>
+    <dimen name="fab_margin">1dp</dimen>
 </resources>
