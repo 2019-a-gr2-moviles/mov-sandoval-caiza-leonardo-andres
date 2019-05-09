@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".formInsertar">
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="226dp"
+            android:layout_height="48dp"
+            android:id="@+id/textInputLayout3"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="156dp"
+            android:layout_marginRight="156dp" app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:layout_marginBottom="25dp" app:layout_constraintBottom_toTopOf="@+id/textView3">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textNombre"/>
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="395dp"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="112dp"
+            tools:layout_editor_absoluteX="8dp" android:id="@+id/textInputLayout"/>
+    <Spinner
+            android:layout_width="221dp"
+            android:layout_height="36dp"
+            android:entries="@array/TiposPartes"
+            android:id="@+id/spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="29dp" android:layout_marginStart="29dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="161dp" android:layout_marginRight="161dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTipo" android:layout_marginBottom="22dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"/>
+    <TextView
+            android:text="Seleccione un Tipo:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTipo"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="259dp"
+            android:layout_marginRight="259dp"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="245dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/spinner"/>
+    <TextView
+            android:text="Ingrese un Nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            tools:layout_editor_absoluteY="322dp"
+            tools:layout_editor_absoluteX="28dp"/>
+    <TextView
+            android:text="Ingrese la descripcion"
+            android:layout_width="175dp"
+            android:layout_height="26dp"
+            android:id="@+id/textView3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="29dp" android:layout_marginStart="29dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="207dp" android:layout_marginRight="207dp" android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="229dp"
+            android:layout_height="47dp"
+            android:id="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="29dp"
+            android:layout_marginStart="29dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="153dp"
+            android:layout_marginRight="153dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" android:layout_marginBottom="28dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewPrecio">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textDescripcion"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+            android:text="Precio"
+            android:layout_width="41dp"
+            android:layout_height="19dp"
+            android:id="@+id/textViewPrecio"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="28dp" android:layout_marginStart="28dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="342dp" android:layout_marginRight="342dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginTop="28dp" app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            android:layout_marginBottom="1dp" app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"/>
+    <Button
+            android:text="Guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonGuardar"
+            tools:layout_editor_absoluteX="194dp" tools:layout_editor_absoluteY="599dp"/>
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="228dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPrecio" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="167dp"
+            app:layout_constraintVertical_bias="0.387" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="28dp" android:layout_marginStart="28dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="155dp" android:layout_marginRight="155dp" android:id="@+id/textInputLayout4">
+
+        <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textPrecio"/>
+    </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>
