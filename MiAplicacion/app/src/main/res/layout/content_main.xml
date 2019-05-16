@@ -16,6 +16,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:textColor="@color/colorHolaMundo"/>
+            app:layout_constraintTop_toTopOf="parent" android:textColor="@color/colorHolaMundo"
+            android:id="@+id/textView"/>
+    <Button
+            android:text="Actividad 2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="226dp"
+            android:id="@+id/buttonActividad2"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+    />
 
 </android.support.constraint.ConstraintLayout>
