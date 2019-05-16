@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +22,10 @@ class MainActivity : AppCompatActivity() {
                 .setAction("Action", null).show()
         }
 
+        buttonActividad2.setOnClickListener{
+            this.irAActividad2()
+            //irAActividad2()
+        }
 
     }
 
