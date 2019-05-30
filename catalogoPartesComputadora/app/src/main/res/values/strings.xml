@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Catalalogo Partes de Computadoras</string>
-    <string-array name="TiposPartes">
-        <item>Discos Duros</item>
-        <item>Memorias</item>
-        <item>Procesadores</item>
-    </string-array>
-</resources>
