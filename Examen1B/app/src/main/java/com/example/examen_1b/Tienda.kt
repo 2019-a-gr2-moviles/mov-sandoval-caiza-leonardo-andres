@@ -8,9 +8,11 @@ class Tienda(var tiendaID:Int?,
              var nombres:String,
              var direccion:String,
              var fechaApertura:String,
+             var ruc:String,
              var matriz:String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readValue(Int::class.java.classLoader) as? Int,
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -18,15 +20,15 @@ class Tienda(var tiendaID:Int?,
     ) {
     }
     override fun toString(): String {
-        return "NOMBRES: ${nombres} DIRECCION: ${direccion} FECHA APERTURA: ${fechaApertura} " +
+        return "NOMBRES: ${nombres} DIRECCION: ${direccion} FECHA APERTURA: ${fechaApertura} RUC: ${ruc}  " +
                 "MATRIZ:${matriz}"
     }
-
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeValue(tiendaID)
         parcel.writeString(nombres)
         parcel.writeString(direccion)
         parcel.writeString(fechaApertura)
+        parcel.writeString(ruc)
         parcel.writeString(matriz)
     }
 
@@ -43,6 +45,4 @@ class Tienda(var tiendaID:Int?,
             return arrayOfNulls(size)
         }
     }
-
-
 }

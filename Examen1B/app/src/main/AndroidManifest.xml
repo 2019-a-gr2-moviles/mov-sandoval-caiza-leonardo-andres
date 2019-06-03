@@ -9,6 +9,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".IngresarTenda">
+        </activity>
+        <activity android:name=".ActualizarTienda">
+        </activity>
+        <activity android:name=".ConsultarTiendas">
+        </activity>
+        <activity android:name=".lista_tiendas">
+        </activity>
+        <activity android:name=".ListaTienda">
+        </activity>
         <activity android:name=".MenuPrincipal">
         </activity>
         <activity android:name=".MainActivity">

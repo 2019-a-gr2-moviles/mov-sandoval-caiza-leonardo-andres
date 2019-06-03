@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun ingresarUsuario(){
-        BDEquipoFutbol.guardarUsuario(txtNombre.text.toString())
-        val intentMenu = Intent(this, MenuActivity::class.java)
+        BDTienda.guardarUsuario(txtNombre.text.toString())
+        val intentMenu = Intent(this, MenuPrincipal::class.java)
         intentMenu.putExtra("usuario", txtNombre.text.toString())
         startActivity(intentMenu)
     }

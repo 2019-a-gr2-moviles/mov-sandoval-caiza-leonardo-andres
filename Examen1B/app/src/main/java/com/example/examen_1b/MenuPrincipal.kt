@@ -18,10 +18,14 @@ class MenuPrincipal : AppCompatActivity() {
     }
 
     fun gestionarTienda(){
-
+        val intentGestionarTienda = Intent(this, ListaTienda::class.java)
+        intentGestionarTienda.putExtra("usuario", usuario)
+        startActivity(intentGestionarTienda)
     }
 
     fun crearTienda(){
-     
+        val intentCrearTienda = Intent(this, IngresarTenda::class.java)
+        intentCrearTienda.putExtra("usuario", usuario)
+        startActivity(intentCrearTienda)
     }
 }
