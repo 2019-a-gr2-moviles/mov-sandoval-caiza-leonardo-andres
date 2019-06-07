@@ -19,11 +19,22 @@
             android:text="PARCELABLE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnParcelable"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.346" android:layout_marginTop="72dp"/>
+            android:id="@+id/btn_parcelable" android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.498" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.643"/>
+    <Button
+            android:text="adapter"
+            android:layout_width="88dp"
+            android:layout_height="0dp"
+            android:id="@+id/btn_adapter"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_parcelable"
+            app:layout_constraintTop_toTopOf="@+id/btn_parcelable" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintStart_toEndOf="@+id/btn_parcelable"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"/>
 
 </android.support.constraint.ConstraintLayout>
