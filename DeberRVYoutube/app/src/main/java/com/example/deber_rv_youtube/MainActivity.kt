@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
         btn_parcelable.setOnClickListener {
             irAParcelable()
         }
+
+        btn_recycler_view.setOnClickListener{
+            irArecyclerView()
+        }
     }
 
     fun irAParcelable(){
@@ -23,8 +27,16 @@ class MainActivity : AppCompatActivity() {
             Parcelable::class.java
         )
         val leonardo = Usuario("Leonardo",23, Date(),12.12)
-        intentExplicito.putExtra("usuario", leonardo);
+        intentExplicito.putExtra("usuario", leonardo)
 
+        startActivity(intentExplicito)
+    }
+
+    fun irArecyclerView(){
+        val intentExplicito = Intent(
+            this,
+            RecyclerViewActivity::class.java
+        )
         startActivity(intentExplicito)
     }
 }
