@@ -15,12 +15,11 @@ class RecyclerViewActivity : AppCompatActivity() {
         val lista = arrayListOf<Video>()
         // val recycler_view = rv_personas
         //val actividad = this //esto es el contexto
-
-
-        lista.add(Video("Silencio en el callejon","Santa Fe Clan"))
-        lista.add(Video("Te ire a Buscar","Santa ft Nanpa"))
-        lista.add(Video("Fuego","Almas de Barrio ft Santa"))
-
+        for(num in 1..10) {
+            lista.add(Video("Silencio en el callejon", "50M", "Santa Fe Clan", 1))
+            lista.add(Video("Te ire a Buscar", "25M", "Santa ft Nanpa", 2))
+            lista.add(Video("Fuego", "20M", "Almas de Barrio ft Santa", 3))
+        }
         iniciarRecyclerView(lista, this,rv_videos)
 
     }
