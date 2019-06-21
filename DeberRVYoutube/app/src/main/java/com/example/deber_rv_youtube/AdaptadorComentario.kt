@@ -1,7 +1,5 @@
 package com.example.deber_rv_youtube
 
-import android.content.Intent
-import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -35,11 +33,12 @@ RecyclerView.Adapter<AdaptadorComentario.MyViewHolder>() {
 
             layout.btn_like.setOnClickListener {
                 Toast.makeText(contexto, "Like ", Toast.LENGTH_SHORT).show()
-                layout.btn_like.animation
+                layout.btn_like.setImageResource(R.mipmap.likec)
             }
 
             layout.btn_dislike.setOnClickListener {
                 Toast.makeText(contexto, "Dislike ", Toast.LENGTH_SHORT).show()
+                layout.btn_dislike.setImageResource(R.mipmap.dislikec)
             }
 
             layout.btn_responder.setOnClickListener {
