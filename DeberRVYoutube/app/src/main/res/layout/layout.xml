@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
               android:orientation="vertical" android:id="@+id/linear_layout">
 
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="190dp">
+            android:layout_height="122dp">
         <ImageView
                 android:layout_width="184dp"
-                android:layout_height="187dp" tools:srcCompat="@drawable/salsa1" android:id="@+id/imageView"
-                android:visibility="visible" app:srcCompat="@drawable/salsa1"/>
+                android:layout_height="104dp" android:id="@+id/imageView"
+                android:visibility="visible" app:srcCompat="@mipmap/salsa1"/>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="256dp"
-                    android:layout_height="65dp" android:id="@+id/txt_nombre"/>
+                android:layout_height="105dp">
             <TextView
                     android:text="TextView"
                     android:layout_width="match_parent"
-                    android:layout_height="53dp" android:id="@+id/txt_visualizacion"/>
+                    android:layout_height="38dp" android:id="@+id/txt_nombre"/>
             <TextView
                     android:text="TextView"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp" android:id="@+id/txt_descripcion"/>
+                    android:layout_height="28dp" android:id="@+id/txt_visualizacion" android:textSize="10sp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp" android:id="@+id/txt_descripcion" android:textSize="10sp"/>
 
         </LinearLayout>
     </LinearLayout>

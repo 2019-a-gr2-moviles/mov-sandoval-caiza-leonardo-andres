@@ -6,6 +6,7 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recycler_view.*
+import kotlinx.android.synthetic.main.layout.*
 
 class RecyclerViewActivity : AppCompatActivity() {
 
@@ -16,10 +17,16 @@ class RecyclerViewActivity : AppCompatActivity() {
         // val recycler_view = rv_personas
         //val actividad = this //esto es el contexto
         for(num in 1..10) {
-            lista.add(Video("Silencio en el callejon", "50M", "Santa Fe Clan", 1))
-            lista.add(Video("Te ire a Buscar", "25M", "Santa ft Nanpa", 2))
-            lista.add(Video("Fuego", "20M", "Almas de Barrio ft Santa", 3))
+            lista.add(Video("Salsa romantica del ayer y hoy", "50M", "Link de descarga. Lista de Canciones", 1))
+            lista.add(Video("Salsa romantica ix", "25M", "Las mejores salsa romanticas", 2))
+            lista.add(Video("salsas viejitas pero bonitas", "20M", "Espero que les guste, les invito a mi blog", 3))
+            lista.add(Video("Salsas mix 100% bailable", "10M", "Top mix para bailar", 4))
+            lista.add(Video("salsas para bailar", "25M", "Las mejores mezclas DJ Leo", 5))
+            lista.add(Video("Salsa mix del recuerdo", "45M", "Viejitas pero bonitas", 6))
+
         }
+
+
         iniciarRecyclerView(lista, this,rv_videos)
 
     }
@@ -36,6 +43,20 @@ class RecyclerViewActivity : AppCompatActivity() {
         adaptadorPersona.notifyDataSetChanged()
 
     }
+
+    fun iniciarRecyclerView2(lista: List<Comentario>, actividad:RecyclerViewActivity, recycler_view: RecyclerView){
+        val adaptadorPersona = AdaptadorComentario(lista,
+            actividad,
+            recycler_view)
+
+        rv_videos.adapter = adaptadorPersona
+        rv_videos.itemAnimator = DefaultItemAnimator()
+        rv_videos.layoutManager = LinearLayoutManager(actividad)
+
+        adaptadorPersona.notifyDataSetChanged()
+
+    }
+
 
     fun cambiarNombreTextView(texto: String){
         textView2.text=texto
