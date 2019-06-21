@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_parcelable.*
 
 class Parcelable : AppCompatActivity() {
@@ -27,7 +28,9 @@ class Parcelable : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
             MainActivity::class.java
+
         )
+        Toast.makeText(this, "Ingreso exitoso ", Toast.LENGTH_SHORT).show()
         startActivity(intentExplicito)
     }
 

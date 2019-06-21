@@ -55,12 +55,84 @@ module.exports = {
     correo: {
       type: 'string',
       isEmail: true
-    }
-  },
+    },
+  // CONFIGURACION DEL PAPA
+  serviciosDeUsuario: { // Nombre atributo de la relacion
+    collection: 'servicio', // Nombre del modelo a relacionar
+    via: 'fkUsuario'  // Nombre atributo FK del otro modelo
+  }
+},
+
+//  CONFIGURACION DEL HIJO
+fkEmpresa: {  // Nombre del FK para la relacion
+  model: 'empresa', // Nombre del modelo a relacionar (papa)
+  // required: true // OPCIONAL -> Siempre ingresar el FK
+}
 
 };
 
 
-
+// http://localhost:1337/usuario
 
 // http://localhost:1337/usuario
+
+// ESTANDAR RESTFUL
+
+// CREAR
+// http://localhost:1337/usuario
+// METODO HTTP: POST
+// Body Params: usuario
+
+// ACTUALIZAR
+// http://localhost:1337/usuario/:id
+// Ej: http://localhost:1337/usuario/2
+// METODO HTTP: PUT
+// Body Params: usuario
+
+// BORRAR
+// http://localhost:1337/usuario/:id
+// Ej: http://localhost:1337/usuario/2
+// METODO HTTP: DELETE
+
+// BUSCAR POR ID
+// http://localhost:1337/usuario/:id
+// Ej: http://localhost:1337/usuario/2
+// METODO HTTP: GET
+
+ 
+
+//Registros que contengan en el nombre la letra A 
+// http://localhost:1337/usuario?where={"nombre":{"contains":"a"}} 
+
+// EJEMPLOS
+
+// 1) Buscar al usuario con nombre Adrian
+// http://localhost:1337/usuario?nombre=Adrian
+
+// 2) Buscar al usuario con nombre Adrian y cedula 1718137159
+// http://localhost:1337/usuario?nombre=Adrian&cedula=1718137159
+
+// 3) Traer los primeros 5
+// http://localhost:1337/usuario?limit=5
+
+
+// 4) Traer los primeros 5 despues de los primeros 10
+// http://localhost:1337/usuario?limit=5&skip=10
+
+
+// 5) Traer los registros ordenados por nombre
+// http://localhost:1337/usuario?sort=nombre
+// http://localhost:1337/usuario?sort=nombre DESC
+// http://localhost:1337/usuario?sort=nombre ASC
+
+// 6) Traer los registros ordenados por nombre
+// http://localhost:1337/usuario?sort=nombre
+// http://localhost:1337/usuario?sort=nombre DESC
+// http://localhost:1337/usuario?sort=nombre ASC
+
+
+// 6) Traer los registros que contengan en el nombr la letra a
+// http://localhost:1337/usuario?where={"nombre":{"contains":"a"}}
+// http://localhost:1337/usuario?where={"sueldo":{"<=":3000}}
+// http://localhost:1337/usuario?where={"fechaNacimiento":{"<=":"2018-01-01"}}
+// http://localhost:1337/usuario?where={"correo":{"endsWith":"@gmail.com"}}
