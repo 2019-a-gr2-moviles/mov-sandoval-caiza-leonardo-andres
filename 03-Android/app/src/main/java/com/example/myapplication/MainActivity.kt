@@ -30,6 +30,18 @@ class MainActivity : AppCompatActivity() {
             irAIntentRespuesta()
         }
 
+        btn_Http.setOnClickListener {
+            irAHttp()
+        }
+
+    }
+
+    fun irAHttp(){
+        val intenExplicito= Intent(
+            this,
+            ConexionHttpActivity::class.java
+        )
+        startActivity(intenExplicito)
     }
 
     fun irAIntentRespuesta(){
