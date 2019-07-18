@@ -74,5 +74,14 @@
             android:id="@+id/btnMapa" app:layout_constraintStart_toStartOf="@+id/btn_toast"
             app:layout_constraintEnd_toEndOf="@+id/btn_toast" android:layout_marginTop="40dp"
             app:layout_constraintTop_toBottomOf="@+id/btn_toast" app:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:text="CICLO DE VIDA ACTIVIDAD"
+            android:layout_width="113dp"
+            android:layout_height="67dp"
+            android:id="@+id/btn_ciclo_vida"
+            app:layout_constraintStart_toStartOf="@+id/btn_intent_respuesta"
+            app:layout_constraintEnd_toEndOf="@+id/btn_intent_respuesta" android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_intent_respuesta"
+            app:layout_constraintHorizontal_bias="0.434"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

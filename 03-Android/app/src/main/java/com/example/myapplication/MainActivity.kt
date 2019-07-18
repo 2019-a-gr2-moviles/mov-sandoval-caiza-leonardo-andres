@@ -38,6 +38,18 @@ class MainActivity : AppCompatActivity() {
             irAMapa()
         }
 
+        btn_ciclo_vida.setOnClickListener {
+            irACicloVida()
+        }
+
+    }
+
+    fun irACicloVida(){
+        val intentExplicito=Intent(
+            this,
+            CicloVidaActivity::class.java
+        )
+        startActivity(intentExplicito)
     }
 
     fun irAMapa(){
