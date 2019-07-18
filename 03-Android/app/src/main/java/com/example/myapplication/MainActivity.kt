@@ -42,6 +42,18 @@ class MainActivity : AppCompatActivity() {
             irACicloVida()
         }
 
+        btn_fragmentos.setOnClickListener {
+            irAFragmentos()
+        }
+
+    }
+
+    fun irAFragmentos(){
+        val intentExplicito=Intent(
+            this,
+            FragmentosActivity::class.java
+        )
+        startActivity(intentExplicito)
     }
 
     fun irACicloVida(){
