@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Examen2B</string>
+    <string name="btn_crear_tienda">create store</string>
+    <string name="btn_ingresar">enter</string>
+    <string name="txt_nom_usuario">" Enter your name"</string>
+    <string name="btn_insertar_tienda">create</string>
+    <string name="btn_mapa">map</string>
+    <string name="btn_gestion_tienda">"Manage Store "</string>
+</resources>

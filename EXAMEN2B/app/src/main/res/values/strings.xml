@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Examen2B</string>
+    <string name="txt_nom_usuario">Ingrese su nombre</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="btn_gestion_tienda">Gestionar Tienda</string>
+    <string name="btn_mapa">Mapa</string>
+    <string name="btn_crear_tienda">Crear Tienda</string>
+    <string name="txt_nom_tienda" translatable="false">Nombres</string>
+    <string name="txt_dir_tienda" translatable="false">Direccion</string>
+    <string name="txt_fecha_tienda" translatable="false">Fecha de Apertura</string>
+    <string name="txt_ruc_tienda" translatable="false">RUC</string>
+    <string name="sw_matriz_tienda" translatable="false">Matriz</string>
+    <string name="btn_insertar_tienda">Crear</string>
+
+
 </resources>

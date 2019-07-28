@@ -11,16 +11,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnEntrar.setOnClickListener {
-            irAMenu()
+        btn_ingresar.setOnClickListener {
+            irAMenuTienda()
 
         }
     }
 
-    fun irAMenu(){
+    fun irAMenuTienda(){
 
-        val intentMenu = Intent(this, MenuActivity::class.java)
-        intentMenu.putExtra("usuario", txtNombre.text.toString())
-        startActivity(intentMenu)
+        val intent = Intent(
+            this,
+            MenuTienda::class.java)
+
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
     }
 }
