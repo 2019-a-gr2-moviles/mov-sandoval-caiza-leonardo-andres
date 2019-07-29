@@ -4,7 +4,6 @@
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
-
 module.exports = {
 
   attributes: {
@@ -14,22 +13,22 @@ module.exports = {
       minLength: 3,
       maxLength: 30,
     },
-    direccion: {
+    apellidos: {
       type: 'string',
       required: true,
       minLength: 3,
       maxLength: 30,
     },
-    fechaApertura: {
+    fechaNacimiento: {
       required: true,
       type: 'string'
     },
-    ruc: {
+    hijos: {
       required: true,
       type: 'number',
       min: 0
     },
-    matriz:{      
+    tieneSeguro:{      
       required: true,
       type: 'boolean'
     },
@@ -38,6 +37,4 @@ module.exports = {
       via: 'idTienda'        // Nombre del campo a hacer la relacion
     },
   },
-
 };
-

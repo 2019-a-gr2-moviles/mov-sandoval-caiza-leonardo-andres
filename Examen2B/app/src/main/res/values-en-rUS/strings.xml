@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Examen2B</string>
+    <string name="btn_actualizar">Update</string>
+    <string name="btn_crear_med">Create</string>
+    <string name="btn_crear_pac" >Create Store</string>
+    <string name="btn_eliminar">Delete</string>
+    <string name="btn_entrar">Enter</string>
+    <string name="btn_ges_med" >Manage product</string>
+    <string name="btn_ges_pac">Manage store</string>
+    <string name="btn_insertar" >Create</string>
+    <string name="btn_mapa" >Map</string>
+    <string name="txt_usuario">Put your name</string>
+</resources>

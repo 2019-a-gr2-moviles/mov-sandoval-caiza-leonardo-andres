@@ -66,7 +66,7 @@ class ActualizarProducto : AppCompatActivity() {
              "nombre" : "${producto.nombre}",
             "composicion" : "${producto.composicion}",
             "usadoPara" : "${producto.usadoPara}",
-            "gramosAIngerir" : ${producto.gramosAIngerir},
+            "precio" : ${producto.precio},
             "fechaCaducidad" : "${producto.fechaCaducidad}",
             "numeroPastillas" : ${producto.numeroPastillas},
             "latitud" : "${producto.latitud}",

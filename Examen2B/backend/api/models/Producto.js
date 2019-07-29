@@ -8,7 +8,7 @@
 module.exports = {
 
   attributes: {
-    numeroProducto: {
+    gramosAIngerir: {
       required: true,
       type: 'number',
       min: 0
@@ -19,23 +19,23 @@ module.exports = {
       minLength: 3,
       maxLength: 20,
     },
-    descripcion: {
+    composicion: {
       type: 'string',
       required: true,
       minLength: 0,
       maxLength: 20,
     },
-    precio: {
+    usadoPara: {
       type: 'string',
       required: true,
       minLength: 0,
       maxLength: 20,
     },
-    fechaLanzamiento: {
+    fechaCaducidad: {
       required: true,
       type: 'string'
     },
-    aniosGarantia: {
+    numeroPastillas: {
       required: true,
       type: 'number',
       min: 0
