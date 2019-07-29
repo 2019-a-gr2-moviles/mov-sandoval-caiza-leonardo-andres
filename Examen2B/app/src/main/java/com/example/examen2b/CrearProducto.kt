@@ -7,25 +7,31 @@ import android.util.Log
 import android.widget.Toast
 import com.github.kittinunf.fuel.httpPost
 import com.github.kittinunf.result.Result
-import kotlinx.android.synthetic.main.activity_crear_tienda.*
+import kotlinx.android.synthetic.main.activity_crear_producto.*
+import java.lang.Exception
 
-class CrearTienda : AppCompatActivity() {
+class CrearProducto : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crear_tienda)
-        btn_ins_pac.setOnClickListener {
+        setContentView(R.layout.activity_crear_producto)
+        val idTienda = this.intent.getIntExtra("idTienda", -1)
+        btn_ins_med.setOnClickListener {
             try {
-                val tienda = Tienda(
-                    null,
+                val producto = Producto(
                     -1,
-                    txt_nombres_tienda.text.toString(),
-                    txt_ape_pac.text.toString(),
-                    dp_fec_nac_pac.text.toString(),
-                    txt_hij_pac.text.toString().toInt(),
-                    sw_seg_pac.text.toString().toBoolean()
+                    txt_gra_med.text.toString().toDouble(),
+                    txt_nom_med.text.toString(),
+                    txt_comp_med.text.toString(),
+                    txt_uso_med.text.toString(),
+                    fec_cad_med.text.toString(),
+                    txt_num_pas_med.text.toString().toInt(),
+                    idTienda,
+                    txt_longitud.text.toString(),
+                    txt_latitud.text.toString()
                 )
-                ingresarTienda(tienda)
+
+                ingresarProducto(producto)
             } catch (e: Exception) {
                 Toast.makeText(
                     this,
@@ -36,17 +42,23 @@ class CrearTienda : AppCompatActivity() {
         }
     }
 
-    fun ingresarTienda(tienda: Tienda) {
+    fun ingresarProducto(producto: Producto) {
+
         try {
-            val url = Conexion.url("tienda")
+            val url = Conexion.url("producto")
+
             val json = """
             {
-            "nombres": "${tienda.nombres}",
-            "apellidos": "${tienda.apellidos}",
-            "fechaNacimiento": "${tienda.fechaNacimiento}",
-            "hijos": ${tienda.hijos},
-            "tieneSeguro" : ${tienda.tieneSeguro}
-                                         }
+            "nombre" : "${producto.nombre}",
+            "composicion" : "${producto.composicion}",
+            "usadoPara" : "${producto.usadoPara}",
+            "gramosAIngerir" : ${producto.gramosAIngerir},
+            "fechaCaducidad" : "${producto.fechaCaducidad}",
+            "numeroPastillas" : ${producto.numeroPastillas},
+            "latitud" : "${producto.latitud}",
+            "longitud" : "${producto.longitud}",
+            "idTienda": ${producto.idTienda}
+            }
                     """.trimIndent()
 
             Log.i("http", json)
@@ -64,6 +76,7 @@ class CrearTienda : AppCompatActivity() {
                                     "Registro Exitoso: ${ClassAux.nombreUsuario}",
                                     Toast.LENGTH_LONG
                                 ).show()
+
                                 irAListaTiendas()
                             }
                         }
@@ -81,9 +94,9 @@ class CrearTienda : AppCompatActivity() {
     fun irAListaTiendas() {
         val intent = Intent(
             this,
-            ListaTiendas::class.java
+            ListaTiendas()::class.java
         )
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
 }

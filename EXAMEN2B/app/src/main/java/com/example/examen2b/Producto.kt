@@ -1,18 +1,16 @@
 package com.example.examen2b
 
-class Producto (
-
+class Producto(
     var id: Int,
-    var numeroProducto: Double,
+    var gramosAIngerir: Double,
     var nombre: String,
-    var descripcion: String,
-    var precio: String,
-    var fechaLanzamiento: String,
-    var aniosGarantia: Int,
+    var composicion: String,
+    var usadoPara: String,
+    var fechaCaducidad: String,
+    var numeroPastillas: Int,
     var idTienda: Int,
     var longitud: String,
     var latitud: String
-
-){
+) {
 
 }

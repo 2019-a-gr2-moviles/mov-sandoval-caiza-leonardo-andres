@@ -1,15 +1,13 @@
 package com.example.examen2b
 
-class Tienda (
-
+class Tienda(
     var productoDeTienda: ArrayList<Producto>?,
     var id: Int,
     var nombres: String,
-    var direccion: String,
-    var fechaApertura: String,
-    var ruc: Int,
-    var matriz: Boolean
+    var apellidos: String,
+    var fechaNacimiento: String,
+    var hijos: Int,
+    var tieneSeguro: Boolean
 
-){
-
+) {
 }
